@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CRUDsite{% endblock %}</title>
+</head>
+<body>
+<p><a href={% url "accounts:home" %}>Homeへ</a></p>
+<p><a href="{% url 'crud:goods_create' %}">商品作成ページ</a></p>
+<p><a href="{% url 'crud:goods_list' %}">登録商品リスト</a></p>
+<hr>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
